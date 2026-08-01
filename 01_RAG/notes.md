@@ -75,3 +75,36 @@ step 5 - install them using uv add -r requirements.txt
 
 step 6 - Create data and notebook folder
 
+
+
+### HOw to load documents of any extension
+
+step 1 - import Document from langchain_core.document
+
+step 2 - import the document loader you need from langchain_community.document_loaders 
+
+step 3 - structre 
+
+example : -
+
+
+    dir_loader = DirectoryLoader(
+    "../data/PDF",
+    glob = "**/*.pdf",
+    loader_cls = PyMuPDFLoader,
+    show_progress = False
+)
+
+example 2- 
+
+loader = DirectoryLoader(
+    "../data/text_files",
+    glob = "**/*.txt",
+    loader_cls=TextLoader,
+    loader_kwargs={"encoding":"utf8"},
+    show_progress = False
+)
+
+
+
+### How to do chunking
