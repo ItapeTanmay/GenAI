@@ -81,9 +81,11 @@ step 6 - Create data and notebook folder
 
 step 1 - import Document from langchain_core.document
 
-step 2 - import the document loader you need from langchain_community.document_loaders 
+step 2 - from langchain_community.document_loaders import DirectoryLoader
 
-step 3 - structre 
+step 3 - import the document loader you need from langchain_community.document_loaders 
+
+step 4 - structre 
 
 example : -
 
